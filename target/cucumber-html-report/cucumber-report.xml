@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="7.6">
+<testcase classname="Automation Assessment" name="The user can retrieve the list of devices from the server app" time="3.266">
+<system-out><![CDATA[Given the user wants to retrieve the list of devices from the server........passed
+When the user requests the list of devices from the server..................passed
+Then the user gets the list of devices from the server......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Automation Assessment" name="The user can verify the list of devices returned by the server are displayed in the client app" time="4">
+<system-out><![CDATA[Given the user has retrieved the list of devices from the server............passed
+When the user checks for the devices in the list in the client app..........passed
+Then the user can verify the id of each device is displayed in the UI.......passed
+And the user can verify the name of each device is displayed in the UI......passed
+And the user can verify the type of each device is displayed in the UI......passed
+And the user can verify the capacity of each device is displayed in the UI..passed
+]]></system-out>
+</testcase>
+</testsuite>

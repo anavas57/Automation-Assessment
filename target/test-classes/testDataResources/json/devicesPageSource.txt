@@ -1,0 +1,229 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <style type="text/css">.device-main-box {
+  align-items: center;
+  padding: 5px 10px;
+  margin: 5px 0;
+  height: 70px;
+  display: flex;
+  justify-content: space-around; }
+  .device-main-box:hover {
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    background-color: #fff; }
+
+.device-info {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  font-family: monospace;
+  justify-content: left;
+  text-align: left;
+  font-weight: bold; }
+
+.device-options {
+  text-align: right;
+  flex: 2 1; }
+
+.device-options button,
+a {
+  cursor: pointer;
+  line-height: 1.60;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  margin: 5px; }
+
+.device-type {
+  color: #0000ff8f; }
+
+.device-remove {
+  background-color: #af4c4c;
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px; }
+
+.device-edit {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px; }
+
+.device-form-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover; }
+
+.device-form {
+  font-family: monospace;
+  text-align: left;
+  font-weight: bold;
+  width: 245px;
+  height: 370px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  padding: 31px;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+  background-color: #fff; }
+
+.device-form input,
+select {
+  width: auto;
+  border: 1px solid #ced4da;
+  padding: 10px 12px;
+  position: relative;
+  font-size: 16px;
+  transition: border-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  border-radius: 4px;
+  background-color: #fff; }
+
+#system_name {
+  width: auto;
+  border: 1px solid #ced4da;
+  padding: 10px 12px;
+  position: relative;
+  font-size: 16px;
+  transition: border-color 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  border-radius: 4px;
+  background-color: #fff; }
+
+.changebutton {
+  margin-top: 20px;
+  text-align: center; }
+
+.submitButton {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1.60;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  margin: 10px; }
+
+.list-box {
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh; }
+
+.list-options-box {
+  margin: 10px; }
+
+.list-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.filter1,
+.filter2 {
+  margin: 5px 10px; }
+
+.list-devices-main {
+  display: flex;
+  justify-content: center; }
+
+.list-devices {
+  background-color: #cdcdcd80;
+  width: 700px;
+  padding: 0px 35px; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace; }
+
+.App {
+  text-align: center;
+  height: 100vh;
+  background-color: #eeeeee; }
+
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; }
+
+.App-link {
+  color: #61dafb; }
+
+.ninja-logo-container {
+  margin-left: 20px;
+  height: 50px;
+  width: 130px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover; }
+</style><script charset="utf-8" src="/static/js/0.chunk.js"></script></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="App"><div class="list-box login-bg-image" style="background-image: url(&quot;https://ok7static.oktacdn.com/fs/bco/7/fs04obklxBa81o0zl356&quot;);"><header class="App-header"><div class="ninja-logo-container" style="background-image: url(&quot;https://ok7static.oktacdn.com/fs/bco/1/fs03egaamPxDLpf8n356&quot;);"></div></header><div class="list-options-box"><div class="list-options"><div class="list-filters"><div class="filter1"><label for="device_type">Device Type: </label><select id="device_type" name="device_type"><option value="ALL">ALL</option><option value="WINDOWS_WORKSTATION">WINDOWS WORKSTATION</option><option value="WINDOWS_SERVER">WINDOWS SERVER</option><option value="MAC">MAC</option></select></div><div class="filter2"><label for="sort_by">Sort by: </label><select id="sort_by" name="sort_by"><option value="hdd_capacity">HDD CAPACITY</option><option value="system_name">SYSTEM NAME</option></select></div><a class="submitButton" href="/devices/add">ADD DEVICE</a></div></div></div><div class="list-devices-main"><div class="list-devices"><div class="device-main-box"><div class="device-info"><span class="device-name">DESKTOP-SMART</span><span class="device-type">WINDOWS_WORKSTATION</span><span class="device-capacity">10 GB</span></div><div class="device-options"><a class="device-edit" href="/devices/edit/e8okoP2l5">Edit</a><button class="device-remove">Remove</button></div></div><div class="device-main-box"><div class="device-info"><span class="device-name">SERVER-ONE</span><span class="device-type">WINDOWS_SERVER</span><span class="device-capacity">50 GB</span></div><div class="device-options"><a class="device-edit" href="/devices/edit/R5LdSnQhY">Edit</a><button class="device-remove">Remove</button></div></div><div class="device-main-box"><div class="device-info"><span class="device-name">FIRST-MAC</span><span class="device-type">MAC</span><span class="device-capacity">180 GB</span></div><div class="device-options"><a class="device-edit" href="/devices/edit/Jj5bn3G2H">Edit</a><button class="device-remove">Remove</button></div></div><div class="device-main-box"><div class="device-info"><span class="device-name">ARMANDO-SERVER</span><span class="device-type">WINDOWS_SERVER</span><span class="device-capacity">256 GB</span></div><div class="device-options"><a class="device-edit" href="/devices/edit/Q1JdBnE12">Edit</a><button class="device-remove">Remove</button></div></div><div class="device-main-box"><div class="device-info"><span class="device-name">MOON-SMART</span><span class="device-type">WINDOWS_SERVER</span><span class="device-capacity">256 GB</span></div><div class="device-options"><a class="device-edit" href="/devices/edit/LM5dBnJ2G">Edit</a><button class="device-remove">Remove</button></div></div><div class="device-main-box"><div class="device-info"><span class="device-name">MIGUEL-PC</span><span class="device-type">WINDOWS_WORKSTATION</span><span class="device-capacity">500 GB</span></div><div class="device-options"><a class="device-edit" href="/devices/edit/e7ocoQ2n3">Edit</a><button class="device-remove">Remove</button></div></div><div class="device-main-box"><div class="device-info"><span class="device-name">GOOD-MAC</span><span class="device-type">MAC</span><span class="device-capacity">500 GB</span></div><div class="device-options"><a class="device-edit" href="/devices/edit/GT556QGnk">Edit</a><button class="device-remove">Remove</button></div></div><div class="device-main-box"><div class="device-info"><span class="device-name">JULIO-MAC-LOCAL</span><span class="device-type">MAC</span><span class="device-capacity">512 GB</span></div><div class="device-options"><a class="device-edit" href="/devices/edit/Up5bcEQp4">Edit</a><button class="device-remove">Remove</button></div></div><div class="device-main-box"><div class="device-info"><span class="device-name">GILBERT-COMPUTER</span><span class="device-type">WINDOWS_WORKSTATION</span><span class="device-capacity">750 GB</span></div><div class="device-options"><a class="device-edit" href="/devices/edit/ab1coL2n9">Edit</a><button class="device-remove">Remove</button></div></div><div class="device-main-box"><div class="device-info"><span class="device-name">MAC-LEADER</span><span class="device-type">MAC</span><span class="device-capacity">2048 GB</span></div><div class="device-options"><a class="device-edit" href="/devices/edit/Th3ngERn9">Edit</a><button class="device-remove">Remove</button></div></div></div></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="/static/js/bundle.js"></script><script src="/static/js/1.chunk.js"></script><script src="/static/js/main.chunk.js"></script><div><div style="position: fixed; inset: auto auto 0px 50%; transform: translate(-50%, 0%); z-index: 100;"><div></div></div></div>
+
+</body></html>
