@@ -18,3 +18,6 @@ This does require you to have maven installed on your file path though. A way ar
 # Usage
 Before running this automation, make sure to launch the server and client applications in Nodejs command prompts/
 To validate the everything is installed correctly, please run TestRunner or the E2EAssessment classes.
+
+# Chrome Driver
+This project includes the Chrome driver for Chrome browser 94.x. In case you are running the project with a different version of the Chrome browser, please download the correct Chrome driver version from here: "https://chromedriver.chromium.org/downloads" and replace the existing driver in the directory: ".\src\test\resources\drivers"
